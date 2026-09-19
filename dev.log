@@ -1,4 +1,3 @@
-
 > mophic@0.1.0 dev
 > next dev --turbo
 
@@ -152,3 +151,6 @@ history loaded
  GET / 200 in 1308ms
  POST /search/WBULIxe 200 in 311470ms
  GET /favicon.ico?favicon.abbb70b2.ico 200 in 160ms
+ ✓ Compiled in 626ms
+Fixed build error: Replaced 'openai.chat' with 'llm.chat' in lib/agents/query-suggestor.tsx
+Build successful with npm run build
