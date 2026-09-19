@@ -19,7 +19,7 @@ export async function querySuggestor(
 
   let finalRelatedQueries: PartialRelated = {}
   await streamObject({
-    model: llm.chat(process.env.OPENAI_API_MODEL || 'gpt-4-turbo'),
+    model: llm.chat(),
     system: `As a professional senior developer, your task is to generate a set of three queries that explore the topic matter more deeply, building upon the initial query and the information uncovered in its search results.
 
     For instance, if the original query was "Nextjs shadcn dashboard", your output should follow this format:

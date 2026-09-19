@@ -152,5 +152,1007 @@ history loaded
  POST /search/WBULIxe 200 in 311470ms
  GET /favicon.ico?favicon.abbb70b2.ico 200 in 160ms
  ✓ Compiled in 626ms
-Fixed build error: Replaced 'openai.chat' with 'llm.chat' in lib/agents/query-suggestor.tsx
-Build successful with npm run build
+Fix ✓ Compiled in 380ms
+ ✓ Compiled in 94ms
+ ✓ Compiled in 414ms
+ ✓ Compiled in 522ms
+ ○ Compiling / ...
+ ✓ Compiled / in 528ms
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.3s
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\favicon.ico\route\app-paths-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppPathsManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:108:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:395:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\favicon.ico\\route\\app-paths-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\favicon.ico\route\app-paths-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppPathsManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:108:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:395:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\favicon.ico\\route\\app-paths-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ✓ Compiled in 114ms
+ ✓ Compiled in 80ms
+ ✓ Compiled in 124ms
+ ✓ Compiled in 95ms
+ ✓ Compiled in 111ms
+ ✓ Compiled in 63ms
+ ✓ Compiled / in 221ms
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\favicon.ico\route\app-paths-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppPathsManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:108:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:395:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\favicon.ico\\route\\app-paths-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\Deep\github-repo-tavily-ai-search\.next\server\app\page\app-build-manifest.json'
+    at async open (node:internal/fs/promises:642:25)
+    at async readFile (node:internal/fs/promises:1279:14)
+    at async readPartialManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:28:23)
+    at async TurbopackManifestLoader.loadAppBuildManifest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack\manifest-loader.js:90:91)
+    at async handleRouteType (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\turbopack-utils.js:376:17)
+    at async Object.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\hot-reloader-turbopack.js:644:17)
+    at async DevBundlerService.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\dev-bundler-service.js:18:20)
+    at async DevServer.ensurePage (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:551:9)
+    at async Object.ensure (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:169:17)
+    at async DevRouteMatcherManager.matchAll (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\dev-route-matcher-manager.js:96:13)
+    at async DevRouteMatcherManager.match (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\future\route-matcher-managers\default-route-matcher-manager.js:155:26)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\next-server.js:228:31)
+    at async DevServer.handleRequestImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\Deep\github-repo-tavily-ai-search\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\Deep\\github-repo-tavily-ai-search\\.next\\server\\app\\page\\app-build-manifest.json'
+}
+ ✓ Compiled in 483ms

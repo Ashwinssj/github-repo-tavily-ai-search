@@ -33,13 +33,13 @@ export async function researcher(
 
   let isFirstToolResponse = true
   const result = await nonexperimental_streamText({
-    model: llm.chat(process.env.OPENAI_API_MODEL),
+    model: llm.chat(),
     maxTokens: 2500,
-    system: `As a professional search expert, you possess the ability to search for public github repositories to help user find a project to use a startboard. 
+    system: `As a professional search expert, you possess the ability to search for public github repositories to help user find a project to use a startboard.
     For each user query, utilize the search results to their fullest potential to provide additional information and assistance in your response.
     Assume user is a developer and some things may be specific packages, libraries, tools, APIs or product requirements to that they are looking for in repository search results .
     Aim to be as helpful and detailed as possible by looking at file contents inside repo and analyzing description, demo link and all supplementary information to determine what a repo does.
-    Clarify languages or any other user intent to provide the best results. 
+    Clarify languages or any other user intent to provide the best results.
     Whenever quoting or referencing information from a specific URL, always cite the source URL explicitly.`,
     messages,
     tools: {

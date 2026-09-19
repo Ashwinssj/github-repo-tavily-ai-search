@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vercel Deployment Troubleshooting Guide</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --accent-blue: #4cc9f0;
+            --accent-green: #4ade80;
+            --accent-yellow: #fbbf24;
+            --accent-red: #f87171;
+            --border-color: #333333;
+            --code-bg: #2d2d2d;
+            --warning-bg: rgba(248, 115, 113, 0.1);
+            --info-bg: rgba(76, 201, 240, 0.1);
+            --success-bg: rgba(74, 222, 128, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--accent-blue);
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 12px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--accent-yellow);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        code {
+            background-color: var(--code-bg);
+            color: var(--accent-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 16px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.9em;
+        }
+
+        .card {
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .card-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-left: auto;
+        }
+
+        .status-error {
+            background-color: var(--accent-red);
+            color: white;
+        }
+
+        .status-warning {
+            background-color: var(--accent-yellow);
+            color: #0a0a0a;
+        }
+
+        .status-info {
+            background-color: var(--accent-blue);
+            color: white;
+        }
+
+        .status-success {
+            background-color: var(--accent-green);
+            color: white;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        .table th, .table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table th {
+            background-color: var(--bg-tertiary);
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        .table tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        .highlight {
+            background-color: var(--info-bg);
+            border-left: 3px solid var(--accent-blue);
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning {
+            background-color: var(--warning-bg);
+            border-left: 3px solid var(--accent-red);
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .success {
+            background-color: var(--success-bg);
+            border-left: 3px solid var(--accent-green);
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -10px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--accent-blue);
+            border-radius: 50%;
+        }
+
+        .timeline-content {
+            margin-left: 20px;
+        }
+
+        .timeline-date {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .no-js-warning {
+            background-color: var(--warning-bg);
+            border: 1px solid var(--accent-yellow);
+            color: var(--text-secondary);
+            padding: 16px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Vercel Deployment Troubleshooting Guide</h1>
+        <p>Solutions for common deployment issues with Tavily AI Search on Vercel</p>
+
+        <div class="warning">
+            <strong>⚠️ Current Issues Being Addressed:</strong>
+            <ul>
+                <li>Vercel Runtime Timeout Error: Task timed out after 60 seconds</li>
+                <li>NVIDIA NIM API Internal Server Errors (500)</li>
+                <li>AI service reliability problems affecting user experience</li>
+            </ul>
+        </div>
+
+        <h2>📋 Quick Reference: Common Errors & Solutions</h2>
+        <div class="table">
+            <thead>
+                <tr>
+                    <th>Error Type</th>
+                    <th>Description</th>
+                    <th>Solution</th>
+                    <th>Difficulty</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vercel Timeout (60s)</td>
+                    <td>AI model calls exceed Vercel's serverless function limit</td>
+                    <td>Implement timeout handling, fallback models, optimize prompts</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>NVIDIA NIM 500 Errors</td>
+                    <td>Internal server errors from NVIDIA API service</td>
+                    <td>Add retry logic, fallback to OpenAI, check API key validity</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td>API Rate Limits</td>
+                    <td>Exceeding NVIDIA NIM or Tavily API rate limits</td>
+                    <td>Implement rate limiting, add queuing, monitor usage</td>
+                    <td>Low</td>
+                </tr>
+                <tr>
+                    <td>Environment Variables Missing</td>
+                    <td>Required API keys not configured in Vercel</td>
+                    <td>Verify all env vars are set in Vercel project settings</td>
+                    <td>Low</td>
+                </tr>
+            </tbody>
+        </div>
+
+        <h2>🔍 Detailed Problem Analysis</h2>
+
+        <div class="card">
+            <div class="card-header">
+                <svg class="card-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2.21-1.79 4-4 4z"/>
+                </svg>
+                <h2 class="card-title">Problem 1: Vercel Timeout (60 seconds)</h2>
+                <span class="status status-error">Active</span>
+            </div>
+            <div class="card-content">
+                <p><strong>Symptoms:</strong></p>
+                <ul>
+                    <li>"Vercel Runtime Timeout Error: Task timed out after 60 seconds"</li>
+                    <li>Slow response times (>60s) when processing AI requests</li>
+                    <li>Users experience failed searches or incomplete results</li>
+                </ul>
+
+                <p><strong>Root Causes:</strong></p>
+                <ul>
+                    <li>NVIDIA NIM API latency (especially for large models like nemotron-3-super-120b)</li>
+                    <li>Complex prompts requiring extensive reasoning</li>
+                    <li>Network delays between Vercel and NVIDIA endpoints</li>
+                    <li>Vercel's serverless function execution limit of 60 seconds</li>
+                </ul>
+
+                <p><strong>Solutions Implemented:</strong></p>
+                <div class="success">
+                    <strong>✅ Already Fixed:</strong>
+                    <ul>
+                        <li>Optimized LLM wrapper to reduce connection overhead</li>
+                        <li>Added proper error handling in agent implementations</li>
+                        <li>Ensured efficient prompt construction to minimize processing time</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>🔧 Recommended Additional Steps:</strong>
+                    <ul>
+                        <li><strong>Implement Request Timeout:</strong> Add explicit timeout settings to AI calls</li>
+                        <li><strong>Fallback to Faster Models:</strong> Use quicker models for simple tasks</li>
+                        <li><strong>Streaming Responses:</strong> Implement partial results to show progress</li>
+                        <li><strong>Cache Frequent Queries:</strong> Reduce duplicate API calls</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <svg class="card-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <h2 class="card-title">Problem 2: NVIDIA NIM Internal Server Errors (500)</h2>
+                <span class="status status-error">Active</span>
+            </div>
+            <div class="card-content">
+                <p><strong>Symptoms:</strong></p>
+                <ul>
+                    <li>"Internal Server Error" from NVIDIA NIM API (status code 500)</li>
+                    <li>AI service failing after 3 retry attempts</li>
+                    <li>Intermittent service availability</li>
+                </ul>
+
+                <p><strong>Root Causes:</strong></p>
+                <ul>
+                    <li>NVIDIA NIM service instability or maintenance</li>
+                    <li>Invalid or expired API credentials</li>
+                    <li>Rate limiting or quota exceeded</li>
+                    <li>Invalid request payloads or parameters</li>
+                    <li>Regional service availability issues</li>
+                </ul>
+
+                <p><strong>Solutions Implemented:</strong></p>
+                <div class="success">
+                    <strong>✅ Already Fixed:</strong>
+                    <ul>
+                        <li>Corrected LLM wrapper configuration</li>
+                        <li>Verified environment variable handling</li>
+                        <li>Ensured proper API key usage</li>
+                        <li>Fixed model name formatting</li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <strong>🔧 Recommended Additional Steps:</strong>
+                    <ul>
+                        <li><strong>Add Exponential Backoff:</strong> Improve retry mechanism with delays</li>
+                        <li><strong>Implement Circuit Breaker:</strong> Temporarily disable failing service</li>
+                        <li><strong>Add Fallback to OpenAI:</strong> Automatic switch when NVIDIA NIM fails</li>
+                        <li><strong>Enhanced Error Logging:</strong> Better diagnostics for troubleshooting</li>
+                        <li><strong>Health Check Endpoint:</strong> Monitor NVIDIA NIM service status</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>🚀 Immediate Action Plan</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Step 1: Immediate (Next 15 minutes)</div>
+                    <h3>Verify Configuration</h3>
+                    <p>Check that all environment variables are correctly set in Vercel:</p>
+                    <ul>
+                        <li><code>NVIDIA_NIM_API_KEY</code> - Valid NVIDIA API key</li>
+                        <li><code>NVIDIA_NIM_BASE_URL</code> - <code>https://integrate.api.nvidia.com/v1</code></li>
+                        <li><code>NVIDIA_NIM_MODEL</code> - <code>nvidia_nim/nvidia/nemotron-3-super-120b-a12b</code></li>
+                        <li><code>USE_NVIDIA_NIM</code> - <code>true</code></li>
+                        <li><code>TAVILY_API_KEY</code> - Valid Tavily key</li>
+                        <li><code>UPSTASH_REDIS_*</code> - Valid Upstash credentials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Step 2: Short Term (Next 1-2 hours)</div>
+                    <h3>Improve Error Handling</h3>
+                    <p>Enhance the LLM wrapper and agent implementations:</p>
+                    <ul>
+                        <li>Add explicit timeout parameters to AI calls</li>
+                        <li>Implement fallback to OpenAI when NVIDIA NIM fails</li>
+                        <li>Add better error classification and logging</li>
+                        <li>Implement exponential backoff for retries</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Step 3: Medium Term (Next 24 hours)</div>
+                    <h3>Optimize for Performance</h3>
+                    <p>Make the application more resilient and faster:</p>
+                    <ul>
+                        <li>Add caching layer for frequent search queries</li>
+                        <li>Optimize prompts to reduce token usage</li>
+                        <li>Implement request batching where possible</li>
+                        <li>Add loading states and progressive UI updates</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Step 4: Long Term (Ongoing)</div>
+                    <h3>Monitoring & Maintenance</h3>
+                    <p>Establish observability and proactive maintenance:</p>
+                    <ul>
+                        <li>Add usage analytics and error tracking</li>
+                        <li>Set up alerts for API failures and performance degradation</li>
+                        <li>Regularly test fallback mechanisms</li>
+                        <li>Document runbooks for common issues</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h2>💡 Pro Tips for Vercel Deployment</h2>
+        <div class="card">
+            <div class="card-header">
+                <svg class="card-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.04 2.13c3.04-3.04 7.97-3.04 11.01 0 3.04 3.04 3.04 7.97 0 11.01-3.04 3.04-7.97 3.04-11.01 0-3.04-3.04-3.04-7.97 0-11.01-3.04-3.04-3.04-7.97 0-11.01zM12 15.5l-3.22-3.22-1.42 1.42L12 18.36l7.78-7.78-1.42-1.42L12 15.5z"/>
+                </svg>
+                <h2 class="card-title">Performance Optimization</h2>
+                <p>To minimize execution time and avoid timeouts:</p>
+                <ul>
+                    <li><strong>Keep prompts concise:</strong> The more tokens in prompt+completion, the longer the API call</li>
+                    <li><strong>Use appropriate temperature:</strong> Lower temperatures (0.1-0.3) for factual queries are faster</li>
+                    <li><strong>Limit max tokens:</strong> Set reasonable maxTokens based on expected response length</li>
+                    <li><strong>Enable streaming:</strong> Show partial results to improve perceived performance</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <svg class="card-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-6 0h-4v2h4V2zm0 4H5v2h4V6zm0 4H5v2h4v-2zm0 4H5v2h4v-2zm6 0H9v2h4v-2z"/>
+                </svg>
+                <h2 class="card-title">Cost Management</h2>
+                <p>To manage API costs while maintaining reliability:</p>
+                <ul>
+                    <li><strong>Monitor usage:</strong> Track API calls and costs regularly</li>
+                    <li><strong>Implement caching:</strong> Reduce duplicate API calls for common queries</li>
+                    <li><strong>Use model appropriately:</strong> Match model capability to task complexity</li>
+                    <li><strong>Set usage limits:</strong> Consider implementing soft limits in your application</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📞 When to Seek Additional Help</h2>
+        <div class="warning">
+            <p>If you've tried the above solutions and are still experiencing issues, consider:</p>
+            <ul>
+                <li>Checking <a href="https://status.nvidia.com/" target="_blank" class="accent-blue">NVIDIA Service Status</a> for ongoing incidents</li>
+                <li>Reviewing <a href="https://status.vercel.com/" target="_blank" class="accent-blue">Vercel Platform Status</a> for platform-wide issues</li>
+                <li>Consulting the <a href="https://docs.vercel.com/" target="_blank" class="accent-blue">Vercel Documentation</a> for serverless function limits</li>
+                <li>Reaching out to NVIDIA Developer Support for API-specific issues</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Last updated: September 20, 2026</p>
+            <p>For ongoing issues, check the application logs in Vercel Dashboard → Deployments → [latest deployment] → Logs</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -14,7 +14,7 @@ export async function inquire(
 
   let finalInquiry: PartialInquiry = {}
   await streamObject({
-    model: llm.chat(process.env.OPENAI_API_MODEL),
+    model: llm.chat(),
     system: `As a senior developer, your role is to deepen your understanding of the user's input by conducting further inquiries into their goal for a perfect starter github repository.
     After receiving an initial response from the user, carefully assess whether additional questions are absolutely essential to provide a comprehensive and accurate answer. Only proceed with further inquiries if the available information is insufficient or ambiguous to conduct a github search.
     This may be clarifications on scope of project, language, specific libraries or packages needed, framework like React, Nextjs, React Native or Flutter, etc.
