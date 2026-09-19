@@ -1,7 +1,7 @@
 # AI site search - Open Source Project Finder (InstaRepo) 
 ### Tavily AI-search for Github repositories
 
-![screenrun-05-11-2024-20-38-17](https://github.com/cameronking4/github-repo-tavily-ai-search/assets/35708477/7d553860-bce0-4864-b648-6eeddf6f9f82)
+![screenrun-05-11-2024-20-38-17](https://github.com/Ashwinssj/github-repo-tavily-ai-search/assets/35708477/7d553860-bce0-4864-b648-6eeddf6f9f82)
 
 Here lives the code for an AI-powered search engine to find the best github repo to start your project. Use Tavily AI API to retrieve, score and analyze search results from Github. Find the perfect starter template simply by searching "Next.js shadcn dashboard". Results are rendered beautifully with Vercel AI SDK Generative UI.
 
@@ -17,7 +17,7 @@ Here lives the code for an AI-powered search engine to find the best github repo
 - Styling: [Tailwind CSS](https://tailwindcss.com/)
 
 ## 🚀 Quickstart
-[![capture](/public/capture-240404_blk.png)](https://github.com/cameronking4/github-repo-tavily-ai-search/assets/35708477/3344bfd5-ea36-487e-9525-421eb7fbff9f)
+[![capture](/public/capture-240404_blk.png)](https://github.com/Ashwinssj/github-repo-tavily-ai-search/assets/35708477/3344bfd5-ea36-487e-9525-421eb7fbff9f)
 
 ### 1. Fork and Clone repo
 

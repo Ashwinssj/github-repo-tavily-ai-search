@@ -1,18 +1,14 @@
 import { CoreMessage, generateObject } from 'ai'
-import { OpenAI } from '@ai-sdk/openai'
 import { nextActionSchema } from '../schema/next-action'
+import { createLLM } from '@/lib/llm'
 
 // Decide whether inquiry is required for the user input
 export async function taskManager(messages: CoreMessage[]) {
-  const openai = new OpenAI({
-    baseUrl: process.env.OPENAI_API_BASE, // optional base URL for proxies etc.
-    apiKey: process.env.OPENAI_API_KEY, // optional API key, default to env property OPENAI_API_KEY
-    organization: '' // optional organization
-  })
+  const llm = createLLM()
 
   try {
     const result = await generateObject({
-      model: openai.chat(process.env.OPENAI_API_MODEL || 'gpt-4-turbo'),
+      model: llm.chat(process.env.OPENAI_API_MODEL),
       system: `As a professional github repo researcher, your primary objective is to fully comprehend the user's query, conduct thorough github search query to gather the necessary information, related repos and provide an appropriate response to help user find a project to start development with.
     To achieve this, you must first analyze the user's input and determine the optimal course of action. You have two options at your disposal:
     1. "proceed": If the provided information is sufficient to address the query effectively, choose this option to proceed with the research and formulate a response.

@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           size={'icon'}
           className="text-muted-foreground/50"
         >
-          <Link href="https://linkedin.com/in/cameronyking" target="_blank">
+          <Link href="https://www.linkedin.com/in/ashwinssj/" target="_blank">
             <SiLinkedin size={18} />
           </Link>
         </Button>
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           size={'icon'}
           className="text-muted-foreground/50"
         >
-          <Link href="https://github.com/cameronking4/github-repo-tavily-ai-search/tree/main" target="_blank">
+          <Link href="https://github.com/Ashwinssj/github-repo-tavily-ai-search" target="_blank">
             <SiGithub size={18} />
           </Link>
         </Button>

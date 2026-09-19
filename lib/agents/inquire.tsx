@@ -1,24 +1,20 @@
-import { OpenAI } from '@ai-sdk/openai'
 import { Copilot } from '@/components/copilot'
 import { createStreamableUI, createStreamableValue } from 'ai/rsc'
 import { CoreMessage, streamObject } from 'ai'
 import { PartialInquiry, inquirySchema } from '@/lib/schema/inquiry'
+import { createLLM } from '@/lib/llm'
 
 export async function inquire(
   uiStream: ReturnType<typeof createStreamableUI>,
   messages: CoreMessage[]
 ) {
-  const openai = new OpenAI({
-    baseUrl: process.env.OPENAI_API_BASE, // optional base URL for proxies etc.
-    apiKey: process.env.OPENAI_API_KEY, // optional API key, default to env property OPENAI_API_KEY
-    organization: '' // optional organization
-  })
+  const llm = createLLM()
   const objectStream = createStreamableValue<PartialInquiry>()
   uiStream.update(<Copilot inquiry={objectStream.value} />)
 
   let finalInquiry: PartialInquiry = {}
   await streamObject({
-    model: openai.chat(process.env.OPENAI_API_MODEL || 'gpt-4-turbo'),
+    model: llm.chat(process.env.OPENAI_API_MODEL),
     system: `As a senior developer, your role is to deepen your understanding of the user's input by conducting further inquiries into their goal for a perfect starter github repository.
     After receiving an initial response from the user, carefully assess whether additional questions are absolutely essential to provide a comprehensive and accurate answer. Only proceed with further inquiries if the available information is insufficient or ambiguous to conduct a github search.
     This may be clarifications on scope of project, language, specific libraries or packages needed, framework like React, Nextjs, React Native or Flutter, etc.

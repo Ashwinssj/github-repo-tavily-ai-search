@@ -3,17 +3,13 @@ import { CoreMessage, streamObject } from 'ai'
 import { PartialRelated, relatedSchema } from '@/lib/schema/related'
 import { Section } from '@/components/section'
 import SearchRelated from '@/components/search-related'
-import { OpenAI } from '@ai-sdk/openai'
+import { createLLM } from '@/lib/llm'
 
 export async function querySuggestor(
   uiStream: ReturnType<typeof createStreamableUI>,
   messages: CoreMessage[]
 ) {
-  const openai = new OpenAI({
-    baseUrl: process.env.OPENAI_API_BASE, // optional base URL for proxies etc.
-    apiKey: process.env.OPENAI_API_KEY, // optional API key, default to env property OPENAI_API_KEY
-    organization: '' // optional organization
-  })
+  const llm = createLLM()
   const objectStream = createStreamableValue<PartialRelated>()
   uiStream.append(
     <Section title="Related" separator={true}>

@@ -1,0 +1,150 @@
+
+> mophic@0.1.0 dev
+> next dev --turbo
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.3 (turbo)
+  - Local:        http://localhost:3001
+  - Environments: .env.local
+
+ ✓ Starting...
+'yarn' is not recognized as an internal or external command,
+operable program or batch file.
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 21.7s
+history loaded
+ GET / 200 in 23434ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 697ms
+ GET /favicon.ico?favicon.abbb70b2.ico 200 in 917ms
+ ○ Compiling /search/[id] ...
+ ✓ Compiled /search/[id] in 948ms
+APICallError [AI_APICallError]: Not Found
+    at C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5980:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async postToApi (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5890:23)
+    at async OpenAIChatLanguageModel.doGenerate (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:9878:26)
+    at async _retryWithExponentialBackoff (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:395:16)
+    at async generateObject (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:534:40)
+    at async taskManager (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1075:24)
+    at async processEvents (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1925:29) {
+  url: 'https://integrate.api.nvidia.com/v1/chat/completions',
+  requestBodyValues: {
+    model: 'nvidia_nim/nvidia/nemotron-3-super-120b-a12b',
+    logit_bias: undefined,
+    user: undefined,
+    max_tokens: undefined,
+    temperature: undefined,
+    top_p: undefined,
+    frequency_penalty: undefined,
+    presence_penalty: undefined,
+    seed: undefined,
+    messages: [ [Object], [Object] ],
+    tool_choice: { type: 'function', function: [Object] },
+    tools: [ [Object] ]
+  },
+  statusCode: 404,
+  responseBody: '404 page not found\n',
+  cause: undefined,
+  isRetryable: false,
+  data: undefined
+}
+APICallError [AI_APICallError]: Not Found
+    at C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5980:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async postToApi (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5890:23)
+    at async OpenAIChatLanguageModel.doStream (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:9910:26)
+    at async _retryWithExponentialBackoff (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:395:16)
+    at async streamText (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:1475:47)
+    at async researcher (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1536:20)
+    at async processEvents (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1961:63) {
+  url: 'https://integrate.api.nvidia.com/v1/chat/completions',
+  requestBodyValues: {
+    model: 'nvidia_nim/nvidia/nemotron-3-super-120b-a12b',
+    logit_bias: undefined,
+    user: undefined,
+    max_tokens: 2500,
+    temperature: 0,
+    top_p: undefined,
+    frequency_penalty: undefined,
+    presence_penalty: undefined,
+    seed: undefined,
+    messages: [ [Object], [Object] ],
+    tools: [ [Object] ],
+    stream: true
+  },
+  statusCode: 404,
+  responseBody: '404 page not found\n',
+  cause: undefined,
+  isRetryable: false,
+  data: undefined
+}
+ ⨯ unhandledRejection: APICallError [AI_APICallError]: Not Found
+    at C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5980:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async postToApi (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5890:23)
+    at async OpenAIChatLanguageModel.doStream (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:9910:26)
+    at async _retryWithExponentialBackoff (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:395:16)
+    at async streamText (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:1475:47)
+    at async researcher (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1536:20)
+    at async processEvents (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1961:63) {
+  url: 'https://integrate.api.nvidia.com/v1/chat/completions',
+  requestBodyValues: {
+    model: 'nvidia_nim/nvidia/nemotron-3-super-120b-a12b',
+    logit_bias: undefined,
+    user: undefined,
+    max_tokens: 2500,
+    temperature: 0,
+    top_p: undefined,
+    frequency_penalty: undefined,
+    presence_penalty: undefined,
+    seed: undefined,
+    messages: [ [Object], [Object] ],
+    tools: [ [Object] ],
+    stream: true
+  },
+  statusCode: 404,
+  responseBody: '404 page not found\n',
+  cause: undefined,
+  isRetryable: false,
+  data: undefined
+}
+ ⨯ unhandledRejection: APICallError [AI_APICallError]: Not Found
+    at C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5980:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async postToApi (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:5890:23)
+    at async OpenAIChatLanguageModel.doStream (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\node_modules_29801f._.js:9910:26)
+    at async _retryWithExponentialBackoff (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:395:16)
+    at async streamText (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\_9c4c19._.js:1475:47)
+    at async researcher (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1536:20)
+    at async processEvents (C:\Users\Deep\github-repo-tavily-ai-search\.next\server\chunks\ssr\[root of the server]__8a9136._.js:1961:63) {
+  url: 'https://integrate.api.nvidia.com/v1/chat/completions',
+  requestBodyValues: {
+    model: 'nvidia_nim/nvidia/nemotron-3-super-120b-a12b',
+    logit_bias: undefined,
+    user: undefined,
+    max_tokens: 2500,
+    temperature: 0,
+    top_p: undefined,
+    frequency_penalty: undefined,
+    presence_penalty: undefined,
+    seed: undefined,
+    messages: [ [Object], [Object] ],
+    tools: [ [Object] ],
+    stream: true
+  },
+  statusCode: 404,
+  responseBody: '404 page not found\n',
+  cause: undefined,
+  isRetryable: false,
+  data: undefined
+}
+The streamable UI has been slow to update. This may be a bug or a performance issue or you forgot to call `.done()`.
+The streamable UI has been slow to update. This may be a bug or a performance issue or you forgot to call `.done()`.
+The streamable UI has been slow to update. This may be a bug or a performance issue or you forgot to call `.done()`.
+ ✓ Compiled in 121ms
+ ✓ Compiled /search/[id] in 184ms
+history loaded
+history loaded
+ ✓ Compiled / in 222ms

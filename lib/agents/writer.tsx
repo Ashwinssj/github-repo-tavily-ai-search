@@ -1,9 +1,9 @@
-import { OpenAI } from '@ai-sdk/openai'
 import { createStreamableUI, createStreamableValue } from 'ai/rsc'
 import { CoreMessage, streamText as nonexperimental_streamText } from 'ai'
 import { Section } from '@/components/section'
 import { BotMessage } from '@/components/message'
 import { createAnthropic } from '@ai-sdk/anthropic'
+import { createLLM } from '@/lib/llm'
 export async function writer(
   uiStream: ReturnType<typeof createStreamableUI>,
   streamText: ReturnType<typeof createStreamableValue<string>>,
@@ -15,12 +15,10 @@ export async function writer(
       baseUrl: process.env.SPECIFIC_API_BASE,
       apiKey: process.env.SPECIFIC_API_KEY
     })
+  } else if (process.env.USE_NVIDIA_NIM === 'true') {
+    openai = createLLM()
   } else {
-    openai = new OpenAI({
-      baseUrl: process.env.SPECIFIC_API_BASE,
-      apiKey: process.env.SPECIFIC_API_KEY,
-      organization: '' // optional organization
-    })
+    openai = createLLM(true)
   }
   let fullResponse = ''
   const answerSection = (
@@ -36,7 +34,7 @@ export async function writer(
         ? anthropic!(
             process.env.SPECIFIC_API_MODEL || 'claude-3-haiku-20240307'
           )
-        : openai!.chat(process.env.SPECIFIC_API_MODEL || 'llama3-70b-8192'),
+        : openai!.chat(undefined),
     maxTokens: 2500,
     system: `As a professional writer, your job is to generate a comprehensive and informative, yet concise answer of 300 words or less for the given question based solely on the provided search results (URL and content). 
     You must only use information from the provided search results. Use an unbiased and senior developer tone.

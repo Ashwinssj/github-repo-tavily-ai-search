@@ -7,7 +7,7 @@ import {
 } from 'ai'
 import { searchSchema } from '@/lib/schema/search'
 import { Section } from '@/components/section'
-import { OpenAI } from '@ai-sdk/openai'
+import { createLLM } from '@/lib/llm'
 import { BotMessage } from '@/components/message'
 import Exa from 'exa-js'
 import { Card } from '@/components/ui/card'
@@ -19,11 +19,7 @@ export async function researcher(
   messages: CoreMessage[],
   useSpecificModel?: boolean
 ) {
-  const openai = new OpenAI({
-    baseUrl: process.env.OPENAI_API_BASE, // optional base URL for proxies etc.
-    apiKey: process.env.OPENAI_API_KEY, // optional API key, default to env property OPENAI_API_KEY
-    organization: '' // optional organization
-  })
+  const llm = createLLM()
 
   const searchAPI: 'tavily' | 'exa' = 'tavily'
 
@@ -37,7 +33,7 @@ export async function researcher(
 
   let isFirstToolResponse = true
   const result = await nonexperimental_streamText({
-    model: openai.chat(process.env.OPENAI_API_MODEL || 'gpt-4-turbo'),
+    model: llm.chat(process.env.OPENAI_API_MODEL),
     maxTokens: 2500,
     system: `As a professional search expert, you possess the ability to search for public github repositories to help user find a project to use a startboard. 
     For each user query, utilize the search results to their fullest potential to provide additional information and assistance in your response.
