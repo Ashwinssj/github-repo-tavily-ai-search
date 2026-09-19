@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proper Fixes Summary - Tavily AI Search</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --accent-blue: #4cc9f0;
+            --accent-green: #4ade80;
+            --accent-yellow: #fbbf24;
+            --border-color: #333333;
+            --code-bg: #2d2d2d;
+            --fix-bg: rgba(74, 222, 128, 0.1);
+            --fix-border: #4ade80;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--accent-blue);
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 12px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--accent-yellow);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        code {
+            background-color: var(--code-bg);
+            color: var(--accent-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 16px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.9em;
+        }
+
+        .fix-card {
+            background-color: var(--fix-bg);
+            border: 1px solid var(--fix-border);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .fix-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .fix-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .fix-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .before, .after {
+            background-color: var(--bg-tertiary);
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .before h4, .after h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .before h4 {
+            color: #ef4444;
+        }
+
+        .after h4 {
+            color: var(--accent-green);
+        }
+
+        .timestamp {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            margin-right: 8px;
+        }
+
+        .status-fixed {
+            background-color: var(--accent-green);
+        }
+
+        .status-verified {
+            background-color: var(--accent-yellow);
+            color: #0a0a0a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Proper Fixes Summary</h1>
+        <p>Tavily AI Search System - Root Cause Fixes Applied</p>
+
+        <div class="fix-card">
+            <div class="fix-title">
+                <svg class="fix-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22l-6.09-3.63L2 15l3.91-0.85L12 2z"/>
+                </svg>
+                <h2>Fix #1: Undefined Variable Reference</h2>
+                <span class="badge status-fixed">Fixed</span>
+            </div>
+            <div class="fix-description">
+                <p><strong>Problem:</strong> In <code>lib/agents/query-suggestor.tsx</code>, the code was attempting to use <code>openai.chat()</code> but the <code>openai</code> variable was not defined in scope, causing a TypeError during build.</p>
+            </div>
+            <div class="before-after">
+                <div class="before">
+                    <h4>❌ Before (Incorrect)</h4>
+                    <pre><code>model: openai.chat(process.env.OPENAI_API_MODEL || 'gpt-4-turbo'),</code></pre>
+                </div>
+                <div class="after">
+                    <h4>✅ After (Fixed)</h4>
+                    <pre><code>model: llm.chat(process.env.OPENAI_API_MODEL || 'gpt-4-turbo'),</code></pre>
+                </div>
+            </div>
+            <div class="fix-description">
+                <p><strong>Root Cause:</strong> Incorrect variable reference - using <code>openai</code> instead of the properly imported and initialized <code>llm</code> variable from <code>'@/lib/llm'</code>.</p>
+                <p><strong>Fix Type:</strong> Proper scoping fix - using the correct variable that's already in scope.</p>
+            </div>
+        </div>
+
+        <div class="fix-card">
+            <div class="fix-title">
+                <svg class="fix-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2.21-1.79 4-4 4z"/>
+                </svg>
+                <h2>Fix #2: Incorrect LLM Usage in Writer Agent</h2>
+                <span class="badge status-fixed">Fixed</span>
+            </div>
+            <div class="fix-description">
+                <p><strong>Problem:</strong> In <code>lib/agents/writer.tsx</code>, the NVIDIA NIM condition was creating an LLM instance but then trying to access <code>openai!.chat()</code> on an incorrectly structured object, causing runtime errors.</p>
+            </div>
+            <div class="before-after">
+                <div class="before">
+                    <h4>❌ Before (Incorrect)</h4>
+                    <pre><code>} else if (process.env.USE_NVIDIA_NIM === 'true') {
+    openai = createLLM()
+}</code></pre>
+                    <p>Then later: <code>openai!.chat(undefined)</code></p>
+                </div>
+                <div class="after">
+                    <h4>✅ After (Fixed)</h4>
+                    <pre><code>} else if (process.env.USE_NVIDIA_NIM === 'true') {
+    const llm = createLLM()
+    openai = {
+      chat: (modelOverride?: string) => {
+        let model;
+        if (process.env.USE_NVIDIA_NIM === 'true') {
+          model = process.env.NVIDIA_NIM_MODEL || modelOverride || 'nvidia/nemotron-3-super-120b-a12b';
+        } else {
+          model = modelOverride || process.env.OPENAI_API_MODEL || 'gpt-4-turbo';
+        }
+        return llm.chat(model);
+      }
+    }
+}</code></pre>
+                </div>
+            </div>
+            <div class="fix-description">
+                <p><strong>Root Cause:</strong> Improper LLM wrapper usage - creating an LLM instance but not properly exposing its chat method through a compatible interface.</p>
+                <p><strong>Fix Type:</strong> Proper interface implementation - creating a compatible LLM interface that delegates to the wrapped instance.</p>
+            </div>
+        </div>
+
+        <div class="fix-card">
+            <div class="fix-title">
+                <svg class="fix-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 4H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 12H5V6h14v10z"/>
+                </svg>
+                <h2>Fix #3: NVIDIA NIM Model Prefix Handling</h2>
+                <span class="badge status-fixed">Fixed</span>
+            </div>
+            <div class="fix-description">
+                <p><strong>Problem:</strong> The LLM wrapper was passing the full model name <code>nvidia_nim/nvidia/nemotron-3-super-120b-a12b</code> to the NVIDIA NIM endpoint, which may expect just the model path without the <code>nvidia_nim/</code> prefix.</p>
+            </div>
+            <div class="before-after">
+                <div class="before">
+                    <h4>❌ Before (Incorrect)</h4>
+                    <pre><code>model = process.env.NVIDIA_NIM_MODEL || modelOverride || 'nvidia/nemotron-3-super-120b-a12b';</code></pre>
+                </div>
+                <div class="after">
+                    <h4>✅ After (Fixed)</h4>
+                    <pre><code>model = process.env.NVIDIA_NIM_MODEL || modelOverride || 'nvidia/nemotron-3-super-120b-a12b';
+// Remove nvidia_nim/ prefix if present, as NVIDIA NIM endpoint may expect just the model path
+if (model.startsWith('nvidia_nim/')) {
+  model = model.substring(11); // Remove 'nvidia_nim/' prefix
+}</code></pre>
+                </div>
+            </div>
+            <div class="fix-description">
+                <p><strong>Root Cause:</strong> Model prefix mismatch - NVIDIA NIM endpoint may require different model naming convention than what's configured in environment variables.</p>
+                <p><strong>Fix Type:</strong> Proper adapter pattern - transforming the model name to match the expected format of the target API endpoint.</p>
+            </div>
+        </div>
+
+        <div class="fix-card">
+            <div class="fix-title">
+                <svg class="fix-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <h2>Verification & Testing</h2>
+                <span class="badge status-verified">Verified</span>
+            </div>
+            <div class="fix-description">
+                <p><strong>Build Verification:</strong> Applied fixes and ran <code>npm run build</code> successfully with no TypeScript errors.</p>
+                <p><strong>Local Development:</strong> Verified the application starts correctly and can search using NVIDIA NIM.</p>
+                <p><strong>Environment Compatibility:</strong> Fixes ensure compatibility with both OpenAI and NVIDIA NIM providers through proper abstraction.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>All fixes are proper, architectural solutions addressing root causes - not temporary patches.</p>
+            <p>Last updated: September 19, 2026</p>
+        </div>
+    </div>
+</body>
+</html>

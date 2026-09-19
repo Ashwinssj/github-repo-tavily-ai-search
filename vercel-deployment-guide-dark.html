@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tavily AI Search - Vercel Deployment Guide (Dark Mode)</title>
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-tertiary: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --accent-blue: #4cc9f0;
+            --accent-green: #4ade80;
+            --accent-yellow: #fbbf24;
+            --border-color: #333333;
+            --code-bg: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--accent-blue);
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 12px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--accent-yellow);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+        }
+
+        code {
+            background-color: var(--code-bg);
+            color: var(--accent-green);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 16px 0;
+            border: 1px solid var(--border-color);
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+            font-size: 0.9em;
+        }
+
+        .highlight {
+            background-color: rgba(76, 201, 240, 0.1);
+            border-left: 3px solid var(--accent-blue);
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .note {
+            background-color: rgba(251, 191, 36, 0.1);
+            border-left: 3px solid var(--accent-yellow);
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning {
+            background-color: rgba(239, 68, 68, 0.1);
+            border-left: 3px solid #ef4444;
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--bg-tertiary);
+            font-weight: 600;
+            color: var(--accent-blue);
+        }
+
+        tr:hover {
+            background-color: var(--bg-tertiary);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .logo svg {
+            width: 48px;
+            height: 48px;
+            fill: var(--accent-blue);
+        }
+
+        .step-number {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 28px;
+            margin-right: 12px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .step {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            <h1>Tavily AI Search</h1>
+            <p>Vercel Deployment Guide (Dark Mode)</p>
+        </div>
+
+        <p>This guide explains how to deploy the Tavily AI Search application (modified to use NVIDIA NIM) on Vercel.</p>
+
+        <div class="highlight">
+            <strong>🚀 Quick Summary:</strong> This application uses NVIDIA NIM for AI model inference and requires specific environment variables for deployment to Vercel.
+        </div>
+
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>A Vercel account (<a href="https://vercel.com/signup" style="color: var(--accent-blue);">https://vercel.com/signup</a>)</li>
+            <li>Vercel CLI installed (<code>npm i -g vercel</code>) – optional but helpful</li>
+            <li>Required API keys:
+                <ul>
+                    <li><strong>NVIDIA NIM API Key</strong> (from <a href="https://api.nvidia.com/" style="color: var(--accent-blue);">https://api.nvidia.com/</a>)</li>
+                    <li><strong>Tavily API Key</strong> (from <a href="https://app.tavily.com/" style="color: var(--accent-blue);">https://app.tavily.com/</a>)</li>
+                    <li><strong>Upstash Redis URL and Token</strong> (from <a href="https://upstash.com/redis" style="color: var(--accent-blue);">https://upstash.com/redis</a>)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Step-by-Step Deployment</h2>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Fork / Clone the Repository</h3>
+                <p>If you haven't already, fork this repository to your GitHub account, then clone it locally:</p>
+                <pre><code>git clone https://github.com/<your-username>/github-repo-tavily-ai-search.git
+cd github-repo-tavily-ai-search</code></pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Install Dependencies</h3>
+                <pre><code>npm install</code></pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Create a Production Build (Optional Local Test)</h3>
+                <pre><code>npm run build
+npm run start</code></pre>
+                <p>Verify the app runs correctly locally on <code>http://localhost:3000</code>.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>Push to GitHub (if not already)</h3>
+                <pre><code>git add .
+git commit -m "Prepare for Vercel deployment"
+git push origin main</code></pre>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h3>Import Project to Vercel</h3>
+
+                <h4>Option A: Using Vercel Dashboard (Recommended)</h4>
+                <ol>
+                    <li>Go to <a href="https://vercel.com/dashboard" style="color: var(--accent-blue);">https://vercel.com/dashboard</a> and click <strong>New Project</strong>.</li>
+                    <li>Import your GitHub repository (<code>tavily-ai-search</code>).</li>
+                    <li>Vercel will automatically detect it's a Next.js app.</li>
+                </ol>
+
+                <h4>Option B: Using Vercel CLI</h4>
+                <pre><code>vercel</code></pre>
+                <p>Follow the prompts (link to GitHub repo, etc.).</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+                <h3>Configure Environment Variables</h3>
+                <p>In the Vercel project dashboard, go to <strong>Settings → Environment Variables</strong> and add the following:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Value</th>
+                            <th>Environment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>TAVILY_API_KEY</code></td>
+                            <td>Your Tavily API key</td>
+                            <td>Production (and Preview if desired)</td>
+                        </tr>
+                        <tr>
+                            <td><code>UPSTASH_REDIS_REST_URL</code></td>
+                            <td>Your Upstash Redis REST URL</td>
+                            <td>Production</td>
+                        </tr>
+                        <tr>
+                            <td><code>UPSTASH_REDIS_REST_TOKEN</code></td>
+                            <td>Your Upstash Redis REST token</td>
+                            <td>Production</td>
+                        </tr>
+                        <tr>
+                            <td><code>NVIDIA_NIM_API_KEY</code></td>
+                            <td>Your NVIDIA NIM API key</td>
+                            <td>Production</td>
+                        </tr>
+                        <tr>
+                            <td><code>NVIDIA_NIM_BASE_URL</code></td>
+                            <td><code>https://integrate.api.nvidia.com/v1</code></td>
+                            <td>Production</td>
+                        </tr>
+                        <tr>
+                            <td><code>NVIDIA_NIM_MODEL</code></td>
+                            <td><code>nvidia_nim/nvidia/nemotron-3-super-120b-a12b</code></td>
+                            <td>Production</td>
+                        </tr>
+                        <tr>
+                            <td><code>USE_NVIDIA_NIM</code></td>
+                            <td><code>true</code></td>
+                            <td>Production</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="warning">
+                    <strong>⚠️ Important:</strong> Do <strong>not</strong> expose your API keys in the repository. Vercel encrypts environment variables.
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+                <h3>Build & Deploy</h3>
+                <p>Vercel will automatically build and deploy the project. Monitor the build logs for any issues.</p>
+                <ul>
+                    <li><strong>Build Command:</strong> <code>next build</code></li>
+                    <li><strong>Output Directory:</strong> <code>.next</code> (default for Next.js)</li>
+                    <li><strong>Install Command:</strong> <code>npm install</code></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">8</div>
+            <div class="step-content">
+                <h3>Verify Deployment</h3>
+                <p>Once deployment succeeds, visit the assigned Vercel URL (e.g., <code>https://tavily-ai-search.vercel.app</code>) and test the search functionality.</p>
+            </div>
+        </div>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>Common Issues</h3>
+        <div class="highlight">
+            <strong>🔍 Missing Environment Variables:</strong> Double-check that all required variables are set in the Vercel project settings.
+        </div>
+        <div class="highlight">
+            <strong>⚡ NVIDIA NIM API Errors:</strong> Ensure your NVIDIA NIM API key is valid and has access to the model <code>nvidia/nemotron-3-super-120b-a12b</code>.
+        </div>
+        <div class="highlight">
+            <strong>🔄 Upstash Connection:</strong> Verify the Redis URL and token are correct.
+        </div>
+        <div class="highlight">
+            <strong>🏗️ Build Failures:</strong> Check the Vercel build logs for dependency or Next.js errors.
+        </div>
+
+        <h3>Logs</h3>
+        <p>You can view deployment logs in the Vercel dashboard under <strong>Deployments → [latest deployment] → Logs</strong>.</p>
+
+        <h2>Updating the Deployment</h2>
+        <p>After pushing changes to your GitHub main branch, Vercel will automatically trigger a new deployment (if you have the Git integration enabled). You can also manually trigger redeploys from the dashboard.</p>
+
+        <h2>Additional Notes</h2>
+        <ul>
+            <li>The application uses Next.js 14 with the App Router.</li>
+            <li>The NVIDIA NIM integration is handled via a wrapper in <code>lib/llm.ts</code> that switches providers based on the <code>USE_NVIDIA_NIM</code> flag.</li>
+            <li>No changes to the Vercel platform configuration are required beyond setting the environment variables.</li>
+        </ul>
+
+        <div class="note">
+            <strong>📝 Example .env.local (for local development only – <em>never commit this</em>)</strong>
+            <pre><code>TAVILY_API_KEY=tvly-dev-your_tavily_key_here
+UPSTASH_REDIS_REST_URL=https://your-instance.upstash.io
+UPSTASH_REDIS_REST_TOKEN=your_upstash_token
+NVIDIA_NIM_API_KEY=nvapi-your_nvidia_key_here
+NVIDIA_NIM_BASE_URL=https://integrate.api.nvidia.com/v1
+NVIDIA_NIM_MODEL=nvidia_nim/nvidia/nemotron-3-super-120b-a12b
+USE_NVIDIA_NIM=true</code></pre>
+            <p>Add this file locally for development, but ensure <code>.env.local</code> is listed in <code>.gitignore</code> (it already is).</p>
+        </div>
+
+        <div class="footer">
+            <p>Happy searching! 🚀</p>
+            <p>Last updated: September 19, 2026</p>
+        </div>
+    </div>
+</body>
+</html>

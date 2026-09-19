@@ -16,7 +16,18 @@ export async function writer(
       apiKey: process.env.SPECIFIC_API_KEY
     })
   } else if (process.env.USE_NVIDIA_NIM === 'true') {
-    openai = createLLM()
+    const llm = createLLM()
+    openai = {
+      chat: (modelOverride?: string) => {
+        let model;
+        if (process.env.USE_NVIDIA_NIM === 'true') {
+          model = process.env.NVIDIA_NIM_MODEL || modelOverride || 'nvidia/nemotron-3-super-120b-a12b';
+        } else {
+          model = modelOverride || process.env.OPENAI_API_MODEL || 'gpt-4-turbo';
+        }
+        return llm.chat(model);
+      }
+    }
   } else {
     openai = createLLM(true)
   }
