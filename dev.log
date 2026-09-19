@@ -148,3 +148,7 @@ The streamable UI has been slow to update. This may be a bug or a performance is
 history loaded
 history loaded
  ✓ Compiled / in 222ms
+history loaded
+ GET / 200 in 1308ms
+ POST /search/WBULIxe 200 in 311470ms
+ GET /favicon.ico?favicon.abbb70b2.ico 200 in 160ms
